@@ -50,12 +50,13 @@ methods and validation methods can be found in the [project wiki][1.1].
 ## Latest variant call release &mdash; VC1.0
 
 Our latest variant call release set is [VC1.0][2.1]. This call set contains
-70,009 validated breakpoint-resolved SV calls.
+**70,706** from a candidate set of **184,988** validated breakpoint-resolved SV calls.
 
-Candidates were identified from 3 sources:
+Candidates were identified from 4 sources:
 * [Previously characterized Manta calls][2.2.1]
 * [Platinum Genomes pedigree consistent events with unique population breakpoints][2.2.2]
-* [Icelandic insertions identified with PopIns][2.2.3]<sup>[2](#Kehr2017)</sup>
+* [Parliament insertions][2.2.3]<sup>[2](#English2015)</sup>
+* [Icelandic insertions identified with PopIns][2.2.4]<sup>[3](#Kehr2017)</sup>
 
 All candidates were jointly re-called using our
 [breakpoint joint caller suite, `paragraph`][2.3].
@@ -124,7 +125,7 @@ third pending.
    150 samples selected to represent a diversity of populations
 2. **[PGx panel][3.1.2.1]** (BaseSpace (pending), [ENA][3.1.2.3]) &mdash; 70
    samples with orthogonally validated genotypes for 28 genes relevant for
-   PGx<sup>[3](#Pratt2016)</sup>
+   PGx<sup>[4](#Pratt2016)</sup>
 3. *[Trio panel][3.1.3.1] (pending)* &mdash; 51 children whose parents were
    sequenced as part of the diversity panel
 
@@ -177,10 +178,13 @@ Please [open an issue][4.1] to provide feedback or ask questions.
    million phased human variants validated by genetic inheritance from
    sequencing a three-generation 17-member pedigree. *Genome Res.* 27:157-164.
    [doi:10.1101/gr.210500.116][5.2]
-2. <a name="Kehr2017"></a>Kehr, et al (2017) Diversity in non-repetitive human
+2. <a name="English2015"></a>English, et al (2015) Assessing structural
+   variation in a personal genome-towards a human reference diploid genome. *BMC
+   Genomics.* 16:286 [doi:10.1186/s12864-015-1479-3][5.4]
+3. <a name="Kehr2017"></a>Kehr, et al (2017) Diversity in non-repetitive human
    sequences not found in the reference genome. *Nat Genet.* 49(4):588-593.
    [doi: 10.1038/ng.3801][5.3]
-3. <a name="Pratt2016"></a> Pratt, et al (2016) Characterization of 137 Genomic
+4. <a name="Pratt2016"></a> Pratt, et al (2016) Characterization of 137 Genomic
    DNA Reference Materials for 28 Pharmacogenetic Genes: A GeT-RM Collaborative
    Project. *J Mol Diagn.* 18(1):109-23. [doi:10.1016/j.jmoldx.2015.08.005][5.1]
 
@@ -190,7 +194,8 @@ Please [open an issue][4.1] to provide feedback or ask questions.
 [2.1]: release-notes/vc1_0.md
 [2.2.1]: ../..//wiki/Input-Data-Sources#pop-manta
 [2.2.2]: ../..//wiki/Input-Data-Sources#pg-pop
-[2.2.3]: ../..//wiki/Input-Data-Sources#popins-icelandic-insertions
+[2.2.3]: ../../wiki/Input-Data-Sources#parliament-insertions
+[2.2.4]: ../..//wiki/Input-Data-Sources#popins-icelandic-insertions
 [2.3]: ../../wiki/Joint-Genotyping-Methods#breakpoint-resolved-structural-variant-calls
 [2.4.1]: https://github.com/Illumina/PlatinumGenomes
 [2.5.1]: https://illumina.github.io/Polaris/
@@ -216,3 +221,4 @@ Please [open an issue][4.1] to provide feedback or ask questions.
 [5.1]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4695224/
 [5.2]: http://genome.cshlp.org/content/27/1/157
 [5.3]: https://www.nature.com/ng/journal/v49/n4/full/ng.3801.html
+[5.4]: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-1479-3
