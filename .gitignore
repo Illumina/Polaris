@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+# PyCharm
+.idea/
+Polaris.wiki
+Polaris.archive.*.tar.bz2
+ena_submissions/*

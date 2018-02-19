@@ -26,10 +26,17 @@
 - [Summary](#summary)
 - [Latest variant call release  VC1.0](#latest-variant-call-release--vc10)
     - [Download the VCF](#download-the-vcf)
+        - [AWS CLI](#aws-cli)
+        - [wget](#wget)
 - [Sequencing resources](#sequencing-resources)
     - [HiSeqX PCR-Free Data (Polaris 1)](#hiseqx-pcr-free-data-polaris-1)
     - [Associated resources](#associated-resources)
+        - [Platinum Genomes](#platinum-genomes)
+        - [HiSeqX PCR-Free](#hiseqx-pcr-free)
     - [Coming soon](#coming-soon)
+        - [HiSeqX PCR-Free](#hiseqx-pcr-free)
+        - [10X](#10x)
+        - [NovaSeq S4 PCR-Free](#novaseq-s4-pcr-free)
 - [Issues](#issues)
 - [References](#references)
 
@@ -121,7 +128,7 @@ with a target whole genome coverage of 30X.
 There are currently two unrestricted access panels available in Polaris, with a
 third pending.
 
-1. **[Diversity panel][3.1.1.1]** (BaseSpace (pending), [ENA][3.1.1.3]) &mdash;
+1. **[Diversity panel][3.1.1.1]** ([BaseSpace][3.1.1.2], [ENA][3.1.1.3]) &mdash;
    150 samples selected to represent a diversity of populations
 2. **[PGx panel][3.1.2.1]** (BaseSpace (pending), [ENA][3.1.2.3]) &mdash; 70
    samples with orthogonally validated genotypes for 28 genes relevant for
@@ -205,10 +212,9 @@ Please [open an issue][4.1] to provide feedback or ask questions.
 [3.3]: https://ega-archive.org/
 [3.4]: https://www.ncbi.nlm.nih.gov/gap
 [3.1.1.1]: ../../wiki/HiSeqX-Diversity-Panel
-[3.1.1.2]: basepace/link
+[3.1.1.2]: https://euc1.sh.basespace.illumina.com/projects/2265263
 [3.1.1.3]: https://www.ebi.ac.uk/ena/data/view/PRJEB20654
 [3.1.2.1]: ../../wiki/HiSeqX-PGx-Panel
-[3.1.2.2]: basespace/link
 [3.1.2.3]: https://www.ebi.ac.uk/ena/data/view/PRJEB19931
 [3.1.3.1]: ../../wiki/HiSeqX-Trio-Panel
 [3.1.4.1]: ../../wiki/HiSeqX-Repeat-Expansion-Panel
