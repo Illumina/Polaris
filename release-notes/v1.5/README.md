@@ -86,7 +86,7 @@ In this validation pipeline, samples were independently genotyped using graph-ge
 
 - https://github.com/Illumina/paragraph
 
-Additionally, for large deletions and CNVs, samples were additionally genotyped with our internal depth-based caller.
+Additionally, for a set of large CNVs (>1kb), samples were genotyped with our internal depth-based CNV caller, which uses gaussian mixture modeling to call CNV genotypes from normalized depth values in targeted regions.
 
 ### Detailed validation criteria
 
