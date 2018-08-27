@@ -73,31 +73,41 @@ The input variants and the validation pipeline is based on hg38. Hg19 data was g
 | __Total__             | __4,127__ | __5,382__ |   __30__  |
 
 
-
-### PASS variants (validate rate) partitioned by SVLEN, type and source
-
-|         SV Type       |      INS      |      INS      |      DEL      |      DEL      |
-|:----------------------|:--------------|:--------------|:--------------|:--------------|
-|        Source         |  Manta PASS   | Sniffles PASS |  Manta PASS   | Sniffles PASS |
-|      _L_ \< 50        |     6 (24%)   |   901 (32%)   |    7 (100%)   |  1,178 (46%)  |
-|  50 \< _L_ \< 100 bp  |  1,151 (47%)  |   620 (22%)   |  1,598 (44%)  |   726 (32%)   |
-|  100 \< _L_ \< 1kb    |  1,451 (55%)  |  1,189 (25%)  |  2,256 (45%)  |  1,492 (47%)  |
-|  1kb \< _L_ \< 10kb   |    1 (100%)   |    18 (10%)   |   736 (29%)   |   267 (66%)   |
-|     _L_ > 10kb        |    0 (n/a)    |    0 (n/a)    |   156 (17%)   |    0 (n/a)    |
-|      __Total__        |__2,606 (51%)__|__2,728 (26%)__|__4,753 (39%)__|__3,663 (43%)__|
-
 ## Validation Scheme
 
 Our validation pipeline consists of three major steps:
 - Consistency check in the Platinum Genome pedigree
 - Trio consistency check in Polaris families
-- Population HWE check in our internal samples from clinical lab
+- Population HWE check in our internal samples
+
+Hard filtering is also applied after these steps.
 
 In this validation pipeline, samples were independently genotyped using graph-genotyper *Paragraph* v2.0:
 
 - https://github.com/Illumina/paragraph
 
 Additionally, for large deletions and CNVs, samples were additionally genotyped with our internal depth-based caller.
+
+### Detailed validation criteria
+
+A PASS variant needs to pass **all** below filters.
+
+|                  Category                   |          Pass criterion        |
+|:--------------------------------------------|:------------------------------:|
+|            Pedigree consistency             |     <sup>1</sup>Hamming distance <= 1      |
+|           Call rate in population           |             >= 0.8             |
+|     Paragraph internal filter pass rate     |             >= 0.5             |
+|            trio inconsistency rate<sup>2</sup>          | <=0.1 x #kid-non-reference GTs |
+|                 <sup>3</sup>HWE p value                 |            >= 0.001            |
+
+
+<sup>1</sup> Hamming distance represents the number of wrong genotypes in the pedigree.
+
+<sup>2</sup> If a variant is all alternative homozygous in the pedigree, we require it's either not all homozygous reference in the population or in the trio.
+
+<sup>3</sup> This filter does not apply if a variant meets one of the following criteria:
+    - pass pedigree consistency check (hamming distance = 0 and not all reference homozygous)
+    - pass the filter of trio inconsistency rate
 
 ## Merging Scheme
 
