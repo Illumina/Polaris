@@ -8,8 +8,8 @@
 
 ## Overview
 
-### **Polaris truth data**
-The Polaris data takes structural variants (SV) input from multiple resources, perform population and pedigree validation, and finally output a VCF labeled with the filters from validation.
+### **Validated SVs**
+We took Structural variants (SVs) from multiple resources, performed population and pedigree validation, and finally outputted a VCF labeled with the filters from validation.
 
 Variants that pass our pedigree and population check were labeled as *PASS* in their filter fields.
 
@@ -17,7 +17,7 @@ Variants that fail one or more filter were labled with the specific filter name(
 
 - False positive calls
 - Variants with inaccurate breakpoints.
-    - In the next release, breakpoint refinement will be introduced and we believe the refinement will greatly increase the validation rate of such variants
+    - In the next release, breakpoint refinement will be introduced, which we believe will greatly increase the validation rate of these variants
 - Variants that are difficult to be genotyped with our current methods, including:
     - STRs
     - Complex SVs
@@ -26,12 +26,12 @@ Variants that fail one or more filter were labled with the specific filter name(
 
 v1.5 truth set consists SVs from:
 
-- Manta deletion and insertion calls from NovaSeq NA12877 & NA12878
+- Manta deletion and insertion calls from NovaSeq S1 NA12877 and NA12878
 
-- Refined Sniffles (v1.0.8) deletion and insertion calls from PacBio NA12878 on hg38
-    - Insertion sequence was assembled and refined from PacBio + ONT reads
+- Refined Sniffles simple SV calls from PacBio NA12878 on hg38
+    - Based on the calls generated at [Sedlazeck et al. 2018](https://www.nature.com/articles/s41592-018-0001-7), insertion sequence was re-assembled and refined from PacBio and Oxford Nanopore reads.
 
-- Copy number variants and large deletions curated from population and Platinum Genome pedigree on *hg19*, coming from deletion calls of Manta/Canvas and Sniffles.
+- Copy number variants and large deletions called from population and Platinum Genome pedigree using our [depth-based CNV caller](../../wiki/Joint-Genotyping-Methods#depth-based-cnv-caller)
 
 In the release VCF, the *SOURCE* keys in *INFO* fields indicate which dataset(s) a variant was originally called.
 
@@ -39,9 +39,9 @@ In the release VCF, the *SOURCE* keys in *INFO* fields indicate which dataset(s)
 
 The release vcf contains genotypes of:
 
-- Parents and grandparents in the Platinum Genome pedigree
-- Ashkenazi trio
-- 50 trio families in Polaris
+- Parents and grandparents in the [Platinum Genome pedigree](http://dx.doi.org/10.1101/gr.210500.116)
+- NIST Ashkenazi trio from [Genome in a Bottle](https://www.nist.gov/programs-projects/genome-bottle)
+- 50 trio families in Polaris sequencing resources
 
 ## Summary statistics
 
@@ -75,16 +75,15 @@ The input variants and the validation pipeline is based on hg38. Hg19 data was g
 
 ## Validation Scheme
 
-Our validation pipeline consists of three major steps:
+Our validation pipeline consists of:
 - Consistency check in the Platinum Genome pedigree
 - Trio consistency check in Polaris families
 - Population HWE check in our internal samples
+- Hard filtering
 
-Hard filtering is also applied after these steps.
+Please check the section below for details.
 
-In this validation pipeline, samples were independently genotyped using graph-genotyper *Paragraph* v2.0:
-
-- https://github.com/Illumina/paragraph
+In this validation pipeline, samples were independently re-genotyped using targeted graph-genotyper [*Paragraph*](https://github.com/Illumina/paragraph) v2.0:
 
 Additionally, for a set of large CNVs (>1kb), samples were genotyped with our internal depth-based CNV caller, which uses gaussian mixture modeling to call CNV genotypes from normalized depth values in targeted regions.
 
@@ -98,16 +97,20 @@ A PASS variant needs to pass **all** below filters.
 |           Call rate in population           |             >= 0.8             |
 |     Paragraph internal filter pass rate     |             >= 0.5             |
 |            trio inconsistency rate<sup>2</sup>          | <=0.1 x #kid-non-reference GTs |
-|                 <sup>3</sup>HWE p value                 |            >= 0.001            |
+|                 HWE p value                 |            >= 0.001            |
 
 
 <sup>1</sup> Hamming distance represents the number of wrong genotypes in the pedigree.
 
 <sup>2</sup> If a variant is all alternative homozygous in the pedigree, we require it's either not all homozygous reference in the population or in the trio.
 
-<sup>3</sup> This filter does not apply if a variant meets one of the following criteria:
+Specifically, filter for HWE p value does not apply if a variant meets one of the following criteria:
     - pass pedigree consistency check (hamming distance = 0 and not all reference homozygous)
     - pass the filter of trio inconsistency rate
+
+After these filters, hard filtering is applied. To pass the hard filters, a variant needs to have:
+- Percentage of missing genotypes <= 20% in population 
+- Percentage of genotypes that pass Paragrahph internal filter >= 50% in population
 
 ## Merging Scheme
 
