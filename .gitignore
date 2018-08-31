@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 # PyCharm
+.DS_Store
 .idea/
 Polaris.wiki
 Polaris.archive.*.tar.bz2
