@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<a href="release-notes/vc1_0.md#get-the-data">
+<a href="release-data/v2.0/download-instructions.txt">
 <img src="https://img.shields.io/badge/Latest%20variant%20calls-v2.0-8a6183.svg" alt="HiSeqX data">
 </a>
 </p>
