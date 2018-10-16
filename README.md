@@ -50,7 +50,7 @@ methods and validation methods can be found in the [project wiki][1.1].
 
 ## Variant calls
 
-Our latest variant call truth set of Structural Variants (SVs) is v2.0. Please check our [release-notes/v2.0](release_notes/v2.0/README) for details.
+Our latest variant call truth set of Structural Variants (SVs) is v2.0. Please check our [release-notes/v2.0](release_notes/v2.0/README.md) for details.
 
 ### Download the VCF
 
