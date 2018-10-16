@@ -1,0 +1,10 @@
+To download VCF fog hg38, please do:
+
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg38.vcf.gz
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg38.vcf.gz.tbi
+
+
+To download VCF for hg19, please do:
+
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg19.vcf.gz
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg19.vcf.gz.tbi
