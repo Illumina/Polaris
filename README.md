@@ -130,7 +130,7 @@ through [EGA][3.1.4.2].
 * Platinum Genomes pedigree
 * NIST Ashkenazi Jewish trio
 
-#### 10X<sup>&copy</sup> Chromium
+#### 10X<sup>&copy;</sup> Chromium
 
 * Platinum Genomes Pedigree
 
