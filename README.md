@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-<a href="release-data/v2.0/download-instructions.txt">
-<img src="https://img.shields.io/badge/Latest%20variant%20calls-v2.0-8a6183.svg" alt="HiSeq<sup>&trade;</sup> X data">
+<a href="release-data/v2.1/download-instructions.txt">
+<img src="https://img.shields.io/badge/Latest%20variant%20calls-v2.1-8a6183.svg" alt="HiSeq<sup>&trade;</sup> X data">
 </a>
 </p>
 
