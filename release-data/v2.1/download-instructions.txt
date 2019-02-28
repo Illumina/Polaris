@@ -1,0 +1,6 @@
+To download VCF for hg38, please do:
+
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.1-sv-truthset/all_merge.vcf.gz
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.1-sv-truthset/all_merge.vcf.gz.tbi
+
+hg19 is coming in mid March.

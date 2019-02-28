@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-<a href="release-data/v2.0/download-instructions.txt">
-<img src="https://img.shields.io/badge/Latest%20variant%20calls-v2.0-8a6183.svg" alt="HiSeq<sup>&trade;</sup> X data">
+<a href="release-data/v2.1/download-instructions.txt">
+<img src="https://img.shields.io/badge/Latest%20variant%20calls-v2.1-8a6183.svg" alt="HiSeq<sup>&trade;</sup> X data">
 </a>
 </p>
 
@@ -50,21 +50,16 @@ methods and validation methods can be found in the [project wiki][1.1].
 
 ## Variant calls
 
-Our latest variant call truth set of Structural Variants (SVs) is v2.0. Please check our [release-notes/v2.0](release-notes/v2.0/README.md) for details.
+Our latest truth set of Structural Variants (SVs) is v2.1. Please check our [release-notes/v2.1](release-notes/v2.1/README.md) for details.
 
-### Download the VCF
+### Download the truth set VCF
 
-To download the data, please do:
+To download the SV truth set, please do:
 
 **Genome version *hg38***
 ```
-wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg38.vcf.gz
-wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg38.vcf.gz.tbi
-```
-**Genome version *hg19***
-```
-wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg19.vcf.gz
-wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.0-release-data/all.merge.hg19.vcf.gz
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.1-sv-truthset/all_merge.vcf.gz
+wget https://s3-us-west-1.amazonaws.com/illumina-polaris-v2.1-sv-truthset/all_merge.vcf.gz.tbi
 ```
 ## Sequencing resources
 
