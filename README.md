@@ -35,6 +35,7 @@
         - [HiSeq X PCR-Free](#hiseq-x-pcr-free)
         - [10X Chromium](#10x-chromium)
         - [NovaSeq 6000 S4 PCR-Free](#novaseq-6000-s4-pcr-free)
+- [Citing Polaris](#citing-polaris)
 - [Issues](#issues)
 - [References](#references)
 
@@ -134,6 +135,13 @@ through [EGA][3.1.4.2].
 * Platinum Genomes pedigree
 * NIST Ashkenazi Jewish trio
 
+## Citing Polaris
+
+When citing Polaris, please refer to the original [Expansion Hunter][6.1] paper that
+originally introduced the Polaris dataset:
+
+> Dolzhenko, Egor, et al. "Detection of long repeat expansions from PCR-free whole-genome sequence data." Genome research 27.11 (2017): 1895-1903.
+
 ## Issues
 
 Please [open an issue][4.1] to provide feedback or ask questions.
@@ -194,3 +202,4 @@ Please [open an issue][4.1] to provide feedback or ask questions.
 [5.2]: http://genome.cshlp.org/content/27/1/157
 [5.3]: https://www.nature.com/ng/journal/v49/n4/full/ng.3801.html
 [5.4]: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-1479-3
+[6.1]: https://genome.cshlp.org/content/27/11/1895
