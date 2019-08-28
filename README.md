@@ -137,7 +137,7 @@ through [EGA][3.1.4.2].
 
 ## Citing Polaris
 
-When citing Polaris, please refer to the original [Expansion Hunter][6.1] paper that
+When citing Polaris, please refer to the [Expansion Hunter][6.1] paper that
 originally introduced the Polaris dataset:
 
 > Dolzhenko, Egor, et al. "Detection of long repeat expansions from PCR-free whole-genome sequence data." Genome research 27.11 (2017): 1895-1903.
