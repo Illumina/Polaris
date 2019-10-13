@@ -3,13 +3,10 @@
 * Power to detect chromosome-wide events varies per chromosome, but in general we are fairly well powered to detect events at greater than 5-10% purity with no additional modeling. 
 * From the below plot, it can be seen that some chromosomes are a bit noisier than others, particularly chr9, chr12, and chr19. When calling mosaic trisomy events, we account for the baseline noise and variance across the population.
 
-__file:__ [data/chromosome_coverage.csv](./data/chromosome_coverage.csv])
-
-    *shown here with values doubled, such that a value of 2 represents the expected coverage for a normal diploid segment
-
-
+__file:__ [data/chromosome_coverage.csv](./data/chromosome_coverage.csv)
 
 ![png](plots/chromosome_level_events_3_1.png)
+<i>*shown here with values doubled, such that a value of 2 represents the expected coverage for a normal diploid segment</i>
 
 
 ## Karyotype-band level coverage
@@ -19,20 +16,18 @@ __file:__ [data/chromosome_coverage.csv](./data/chromosome_coverage.csv])
     * We want to identify large CNVs covering multiple chromosome bands. These are unlikly to be in the germline of these presumably healthy individuals, so we will flag these as well to 1) use as test cases mimicking pathogenic variants and 2) exclude these individuals from background calculations.  
 
 There are two main files here, one with per-band coverage across each sample, and a second with consecutive bands with normal or anamolous coverage merged using a rough segmentation method. 
-* __band x sample file:__ [data/band_stats.csv](./data/band_stats.csv]) 
-* __merged-band file:__ [data/chrom_stats.csv](./data/chrom_stats.csv])
+* __band x sample file:__ [data/band_stats.csv.gz](./data/band_stats.csv.gz) 
+* __merged-band file:__ [data/chrom_stats.csv.gz](./data/chrom_stats.csv.gz)
 
-    28 samples with full chromosome alteration: 
+28 samples with full chromosome alteration:   
+
     HG00142  HG00189  HG00623  HG01137  HG01303  HG01357  HG01414  HG01506  
     HG01602  HG01702  HG01704  HG02322  HG02409  HG02485  HG02634  HG02651  
     HG02652  HG02805  HG03118  HG03796  HG03940  HG04198  HG04227  NA12156  
     NA19378  NA20348  NA20759  NA21143  
 
 
-    chromosomes with trisomies: 
-
-
-
+chromosomes with trisomies: 
 <table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -275,8 +270,8 @@ There are two main files here, one with per-band coverage across each sample, an
 </table>
 
 
-    67 samples with large chromosomal alteration spanning
-    at lease two bands:
+67 samples with large chromosomal alteration spanning at lease two bands:  
+
     HG00106  HG00110  HG00141  HG00271  HG00275  HG00285  HG00611  HG00614  
     HG00662  HG00736  HG01167  HG01512  HG01528  HG01617  HG01917  HG02144  
     HG02164  HG02278  HG02392  HG02465  HG02855  HG03061  HG03238  HG03363  
@@ -292,9 +287,9 @@ There are two main files here, one with per-band coverage across each sample, an
 <table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>subject</th>
+      <th>CHROM</th>
+      <th>band(s)</th>
       <th>mad</th>
       <th>median</th>
       <th>z-score</th>

@@ -1,6 +1,7 @@
 ## Whole chromosome events
 
-    28 samples with full chromosome alteration: 
+28 samples with full chromosome alteration:   
+
     HG00142  HG00189  HG00623  HG01137  HG01303  HG01357  HG01414  HG01506  
     HG01602  HG01702  HG01704  HG02322  HG02409  HG02485  HG02634  HG02651  
     HG02652  HG02805  HG03118  HG03796  HG03940  HG04198  HG04227  NA12156  

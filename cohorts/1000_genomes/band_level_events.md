@@ -3,7 +3,8 @@
 * Some of these samples are noisy and get filtered with the noise filter 
 
     67 samples with large chromosomal alteration spanning
-    at lease two bands:
+    at lease two bands: 
+    ```
     HG00106  HG00110  HG00141  HG00271  HG00275  HG00285  HG00611  HG00614  
     HG00662  HG00736  HG01167  HG01512  HG01528  HG01617  HG01917  HG02144  
     HG02164  HG02278  HG02392  HG02465  HG02855  HG03061  HG03238  HG03363  
@@ -12,9 +13,7 @@
     NA12342  NA12717  NA12748  NA12814  NA18522  NA18523  NA18579  NA18592  
     NA18635  NA18644  NA18956  NA19010  NA19083  NA19213  NA19355  NA19454  
     NA19652  NA19750  NA20342  NA20509  NA20517  NA20533  NA20538  NA20795  
-    NA20911  NA21088  NA21118  
-
-
+    NA20911  NA21088  NA21118  ```
 
 <table border="0" class="dataframe">
   <thead>

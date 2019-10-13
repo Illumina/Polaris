@@ -5,7 +5,7 @@
 * This is the genome-wide coverage in the framework of our CNV calling pipeline. In this sense it is not strictly read based coverage, but rather the average number of reads that fall into our 1kb depth bins. 
 * The methods here follow from Canvas CNV calling depth binning convention, updated to fit within the (very similar) Dragen CNV calling paradigm. For a detailed description of the Canvas depth binning method see Section 5.1 of the software design description ([link](https://github.com/Illumina/canvas/raw/master/SoftwareDesignDescription.pdf)).  
 
-__file:__ [data/average_count_per_bin.csv](./data/average_count_per_bin.csv])
+__file:__ [data/average_count_per_bin.csv](./data/average_count_per_bin.csv)
 
 
 <h8>begining of file: </h8>
@@ -34,7 +34,7 @@ __file:__ [data/average_count_per_bin.csv](./data/average_count_per_bin.csv])
 * Shown here is the average absolute value of change in the depth value before and after each of these adjustments. These metrics give us an idea of the magnatude of each of these biases in the samples. 
 * For cell lines the replication adjustment happens after GC adjustment, so we record the change after each adjusment (GC-raw, and rep-GC) as well as after both adjustments (rep-raw).  
 
-__file:__ [data/bias_adjustment_pct_changed.csv](./data/bias_adjustment_pct_changed.csv])
+__file:__ [data/bias_adjustment_pct_changed.csv](./data/bias_adjustment_pct_changed.csv)
 
 
 <h8>begining of file: </h8>
@@ -94,7 +94,7 @@ __file:__ [data/bias_adjustment_pct_changed.csv](./data/bias_adjustment_pct_chan
 * The 1-bin variance is simply the variance of the depth bin data, the 10 and 100 bin variance are the variance of larger length window (roughly 10kb and 100kb, respectively). These larger windows better model noise in CNV calling that is likely to cause false positive and false negitive calls, as these represent more systematic (as opposed to random) variance.  
 * This variance metadata is shown for depth after normalization and GC adjustment, with and without the additional adjustment for genome-wide replication timing trends. 
 
-__file:__ [data/depth_variance.csv](./data/depth_variance.csv])
+__file:__ [data/depth_variance.csv](./data/depth_variance.csv)
 
 
 <h8>begining of file: </h8>
