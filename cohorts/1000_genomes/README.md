@@ -5,7 +5,7 @@
 
 This repository contains a number of descriptive pages with methods as well as plots of flagged samples. Data files accompany this repository, which give more detailed and programatically accessable information. If any additional details are required, please post an issue on the github issue tracker page, and we will do our best to respond as soon as reasonable.  
 
-__All filters used on this dataset are summarized in: [data/filters.csv](./data/filters.csv).__
+_All filters used on this dataset are summarized in: [data/filters.csv](./data/filters.csv)._
 
 
 ####  [Sample metadata](./1kg_sample_metadata.md)
