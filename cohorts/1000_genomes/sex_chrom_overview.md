@@ -166,7 +166,7 @@ __file:__ [data/sex_chromosomes.csv](./data/sex_chromosomes.csv])
 
 
 
-<h6>31 female samples with x-chromosome dropout: </h6>
+<h6>32 female samples with x-chromosome dropout: </h6>
 
 
 
