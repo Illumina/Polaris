@@ -24,7 +24,7 @@ This is a summary of sex chromosome coverage across the cohort. This includes:
 * Sample sex chromsome coverage
 * 7 male samples with y-chromosome dropout ([plots of samples](./y_chrom_dropout.md))
 * 3 male samples with mosaic y-chromosome gain ([plots of samples](./y_chrom_gain.md))
-* 31 female samples with x-chromosome dropout ([plots of samples](./x_chrom_loss.md))
+* 32 female samples with x-chromosome dropout ([plots of samples](./x_chrom_loss.md))
 * 5 female samples with x-chromosome gain ([plots of samples](./x_chrom_gain.md))
 
 #### [Uniparental isodisomy events](1kg_sample_UPD.md) 
