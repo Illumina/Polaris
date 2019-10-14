@@ -1,7 +1,7 @@
 ## Samples with x-chromosome loss
 
 
-<h6>31 female samples with x-chromosome dropout: </h6>
+<h6>32 female samples with x-chromosome dropout: </h6>
 
 
 
