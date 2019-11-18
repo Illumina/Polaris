@@ -4,7 +4,7 @@
 
 * Here the `1kg gender` column is the annotated gender on these samples from the 1000 genomes project FTP site. 
 
-__file:__ [data/sex_chromosomes.csv](./data/sex_chromosomes.csv])
+__file:__ [data/sex_chromosomes.csv](./data/sex_chromosomes.csv)
 
 
 <h6>begining of file: </h6>
